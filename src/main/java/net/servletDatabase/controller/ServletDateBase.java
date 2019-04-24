@@ -3,18 +3,14 @@ package net.servletDatabase.controller;
 import com.aggregator.vo.Vacancy;
 import net.servletDatabase.dao.VacancyDao;
 import net.servletDatabase.dao.exception.DaoSystemException;
-import net.servletDatabase.dao.exception.NoSuchEntityException;
 import net.servletDatabase.dao.impl.VacancyDaoMock;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.sql.*;
+import java.io.IOException;
 import java.util.List;
-import java.util.Properties;
 
 public class ServletDateBase extends HttpServlet {
     private VacancyDao vacancyDao=new VacancyDaoMock();
@@ -62,11 +58,11 @@ public class ServletDateBase extends HttpServlet {
 //            } catch (DaoSystemException e) {
 //                e.printStackTrace();
 //            }
-}
+    }
 //        response.sendRedirect(PAGE_ERROR);
 
 
-    }
+}
 
 
 
